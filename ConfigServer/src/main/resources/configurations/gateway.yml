@@ -1,0 +1,28 @@
+eureka:
+  client:
+    register-with-eureka: false
+
+server:
+  port: 8222
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: school
+          uri: http://localhost:8070
+          predicates:
+            - Path=/api/v1/school/**
+        - id: students
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/v1/students/**
+
+### the P in path must be caital letter otherwise it'll generate an error "org.springframework.context.ApplicationContextException:
+### Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is reactor.core.Exceptions$ErrorCallbackNotImplemented:
+### java.lang.IllegalArgumentException: Unable to find RoutePredicateFactory with name path"

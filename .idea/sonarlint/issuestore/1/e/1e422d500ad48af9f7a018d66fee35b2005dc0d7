@@ -1,0 +1,6 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¯´ôÞ8ë÷×»å1
+d
+java:S1128"BRemove this unused import 'com.netflix.discovery.converters.Auto'.(Ý¼’²ùÿÿÿÿ8À¼†¼å1
+]
+java:S1128";Remove this unused import 'lombok.RequiredArgsConstructor'.(ÑØŽúøÿÿÿÿ8ìÐƒ¼å1
